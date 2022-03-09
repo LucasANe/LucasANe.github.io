@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px auto;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  text-decoration: none;
+  margin: 0px;
+  color: black;
+}
