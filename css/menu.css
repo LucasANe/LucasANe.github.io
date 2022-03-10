@@ -26,7 +26,7 @@
   /* box-shadow: inset 0 -120px var(--branco); */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
   align-items: center;
   border-bottom: 2px solid var(--preto-menu);
   padding: 20px 80px;
@@ -53,74 +53,7 @@
   transition: left right 0.3s;
 }
 
-.conteiner-introducao {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, auto);
-  background-color: black;
-  box-shadow: inset 0 -120px var(--branco);
-  padding: 0px 80px 0px 80px;
-  align-items: center;
-  border-bottom: none;
-}
-
-.introducao-img {
-  grid-column: 2;
-  grid-row: 1 / -1;
-  border-radius: 4px;
-  width: 100%;
-  height: 750px;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-}
-
-.conteiner-titulo {
-  display: grid;
-  grid-row: auto auto auto;
-  grid-column: 1;
-  grid-row: 1 / -1;
-}
-
-.introducao-titulo {
-  color: var(--branco);
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-}
-
-.introducao-titulo-efeito {
-  color: var(--amarelo);
-}
-
-.introducao-p {
-  color: var(--texto-cinza);
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.introducao-botao {
-  color: var(--amarelo-escuro);
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 1.125rem;
-  padding: 15px 25px;
-  border-radius: 4px;
-  background-color: var(--amarelo);
-  display: block;
-  place-self: start;
-  position: relative;
-}
-
-.introducao-conteiner::before {
-  content: "";
-  height: 52px;
-  width: 52px;
-  background: transparent url("../img/dec/bottom-left.svg") no-repeat;
-  position: absolute;
-  bottom: -120px;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .introducao-menu {
     grid-template-rows: auto auto min-content;
     grid-template-columns: 1fr 1fr;
@@ -132,13 +65,18 @@
   }
 
   .menu {
-    grid-column: 2;
-    grid-row: 1;
+    margin: 0px auto;
+  }
+
+  .introducao-menu {
+    display: flex;
     flex-wrap: nowrap;
+    padding: 20px 40px;
+    gap: 30px;
   }
 
   .menu-item {
-    padding: 10px 20px;
+    padding: 20px 25px;
     background-color: var(--cinza-escuro);
     border-radius: 4px;
   }
@@ -148,23 +86,31 @@
     border: none;
   }
 
-  .introducao-img-bike {
-    grid-column: 1 / -1;
-    grid-row: 4;
-    width: 100%;
-  }
   .introducao-logo {
     grid-column: 1;
     grid-row: 1;
     align-self: center;
   }
 
-  .conteiner-titulo {
-    grid-column: 1 /-1;
-    grid-row: 3;
-  }
   .introducao-cinza-menu {
     background-color: black;
     z-index: 1;
   }
+}
+
+@media (max-width: 720px) {
+  .introducao-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .menu {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 550px) {
 }
