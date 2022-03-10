@@ -3,7 +3,14 @@
   --branco: #fff;
   --amarelo-escuro: #320;
   --texto-cinza: #b2b2b2;
+  --cinza-escuro: #111;
+  --preto-menu: #121212;
 }
+
+.introducao-margem {
+  display: block;
+}
+
 .introducao-logo {
   border: 2px solid black;
   border-radius: 4px;
@@ -14,15 +21,15 @@
   border-radius: 4px;
 }
 
-.introducao-conteiner {
+.introducao-menu {
   background-color: black;
-  box-shadow: inset 0 -120px var(--branco);
+  /* box-shadow: inset 0 -120px var(--branco); */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  padding: 20px 50px;
+  grid-template-rows: auto;
   align-items: center;
-  gap: 40px 40px;
+  border-bottom: 2px solid var(--preto-menu);
+  padding: 20px 80px;
 }
 
 .menu {
@@ -31,7 +38,6 @@
   justify-items: end;
   gap: 30px;
   grid-column: 2;
-  grid-row: 1;
   justify-self: end;
 }
 
@@ -47,12 +53,20 @@
   transition: left right 0.3s;
 }
 
-.conteiner-titulo {
-  grid-column: 1;
-  grid-row: 2;
+.conteiner-introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  background-color: black;
+  box-shadow: inset 0 -120px var(--branco);
+  padding: 0px 80px 0px 80px;
+  align-items: center;
+  border-bottom: none;
 }
 
 .introducao-img {
+  grid-column: 2;
+  grid-row: 1 / -1;
   border-radius: 4px;
   width: 100%;
   height: 750px;
@@ -64,7 +78,8 @@
 .conteiner-titulo {
   display: grid;
   grid-row: auto auto auto;
-  gap: 10px;
+  grid-column: 1;
+  grid-row: 1 / -1;
 }
 
 .introducao-titulo {
@@ -103,4 +118,53 @@
   background: transparent url("../img/dec/bottom-left.svg") no-repeat;
   position: absolute;
   bottom: -120px;
+}
+
+@media (max-width: 800px) {
+  .introducao-menu {
+    grid-template-rows: auto auto min-content;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 40px 0px;
+    padding: 40px 40px 0px 0px;
+    background-color: black;
+  }
+
+  .menu {
+    grid-column: 2;
+    grid-row: 1;
+    flex-wrap: nowrap;
+  }
+
+  .menu-item {
+    padding: 10px 20px;
+    background-color: var(--cinza-escuro);
+    border-radius: 4px;
+  }
+
+  .menu-item:hover {
+    background-color: #121212;
+    border: none;
+  }
+
+  .introducao-img-bike {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    width: 100%;
+  }
+  .introducao-logo {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .conteiner-titulo {
+    grid-column: 1 /-1;
+    grid-row: 3;
+  }
+  .introducao-cinza-menu {
+    background-color: black;
+    z-index: 1;
+  }
 }
