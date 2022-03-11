@@ -1,19 +1,11 @@
-:root {
-  --amarelo: #fb0;
-  --branco: #fff;
-  --amarelo-escuro: #320;
-  --texto-cinza: #b2b2b2;
-  --quase-preto: #111;
-  --preto-menu: #121212;
-  --cinza-escuro: #595959;
-}
+@import url(../cores.css);
 
 .conteiner-introducao {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
-  background-color: black;
-  box-shadow: inset 0 -120px var(--branco);
+  background-color: var(--cor-12);
+  box-shadow: inset 0 -120px var(--cor-00);
   padding: 0px 80px 0px 80px;
   align-items: center;
   border-bottom: none;
@@ -39,29 +31,29 @@
 }
 
 .introducao-titulo {
-  color: var(--branco);
+  color: var(--cor-00);
   font-size: 3.5rem;
   margin-bottom: 20px;
 }
 
 .introducao-titulo-efeito {
-  color: var(--amarelo);
+  color: var(--cor-p2);
 }
 
 .introducao-p {
-  color: var(--texto-cinza);
+  color: var(--cor-07);
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 .introducao-botao {
-  color: var(--amarelo-escuro);
+  color: var(--cor-p5);
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 1.3rem;
   padding: 15px 25px;
   border-radius: 4px;
-  background-color: var(--amarelo);
+  background-color: var(--cor-p2);
   display: block;
   place-self: start;
   position: relative;
@@ -75,7 +67,7 @@
 
 @media (max-width: 900px) {
   .conteiner-introducao {
-    background-color: var(--preto-menu);
+    background-color: var(--cor-11);
     gap: 20px;
     padding: 20px 40px;
   }
@@ -126,7 +118,7 @@
   grid-template-rows: 80px min-content;
 }
 .introducao-escolha-span {
-  color: var(--preto-menu);
+  color: var(--cor-11);
   font-size: 3.5rem;
   margin-bottom: 20px;
   font-weight: bolder;
@@ -165,7 +157,7 @@
   display: block;
   height: 10px;
   width: 15px;
-  background-color: var(--amarelo);
+  background-color: var(--cor-p2);
   position: absolute;
   left: -20px;
   bottom: 10px;
@@ -179,7 +171,7 @@
 }
 
 .bike-preco {
-  color: var(--cinza-escuro);
+  color: var(--cor-09);
   font-size: 1.15rem;
   margin-left: 20px;
 }
