@@ -14,3 +14,10 @@ p {
   margin: 0px;
   color: black;
 }
+
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
