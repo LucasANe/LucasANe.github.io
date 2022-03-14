@@ -73,6 +73,22 @@
 .tecnologia-esquerda-baixo-flex {
   display: flex;
   flex-wrap: nowrap;
+  gap: 30px;
+}
+
+.box-info-adc {
+  display: grid;
+  gap: 15px;
+}
+
+.box-adc-titulo {
+  color: var(--cor-00);
+  font-weight: 500;
+}
+
+.box-adc-texto {
+  color: var(--cor-06);
+  line-height: 1.5rem;
 }
 
 .ferramentas-img {
