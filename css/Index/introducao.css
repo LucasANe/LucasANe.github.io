@@ -1,5 +1,3 @@
-@import("../cores.css")
-
 .conteiner-introducao {
   display: grid;
   grid-template-columns: 1fr 1fr;
