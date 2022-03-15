@@ -126,4 +126,26 @@
   .tecnologia-esquerda-baixo-flex {
     flex-wrap: wrap;
   }
+  .tecnologia-texto {
+    margin: 10px 0px;
+  }
+  .tecnologia-botao {
+    margin: 0px 0px 15px 0px;
+  }
+  .box-info-adc {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 3fr;
+  }
+  .box-adc-titulo {
+    grid-column: 2;
+    align-self: center;
+  }
+  .box-adc-texto {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .conteiner-tecnologia {
+    padding: 40px 30px;
+  }
 }

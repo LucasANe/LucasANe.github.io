@@ -96,6 +96,18 @@
 
 @media (max-width: 625px) {
   .depoimento-texto::after {
-    content: none;
+    right: -70px;
+  }
+  .depoimento-texto-box {
+    margin: 0px;
+    padding: 0px 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  .depoimento-img img {
+    object-position: center;
+    height: 300px;
+    width: 100%;
   }
 }

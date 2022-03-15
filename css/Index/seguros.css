@@ -120,6 +120,18 @@
 
 @media (max-width: 750px) {
   .seguros-flex-box {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+  }
+
+  .seguros {
+    grid-template-rows: repeat(3, min-content);
+  }
+}
+
+@media (max-width: 600px) {
+  .conteiner-seguros {
+    padding: 60px 30px;
   }
 }

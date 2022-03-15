@@ -14,7 +14,6 @@
 
 .introducao-menu {
   background-color: var(--cor-12);
-  /* box-shadow: inset 0 -120px var(--cor-00); */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -112,16 +111,30 @@
   }
   .menu {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 0px 20px;
+    flex-wrap: wrap;
+    gap: 0px 0px;
+    margin: 0px;
+    justify-items: center;
+    justify-self: center;
+    justify-content: center;
+  }
+  .menu-item {
+    border-radius: 0px;
   }
 }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   .menu {
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0xp;
+    margin: 0px;
+    justify-items: none;
+    justify-self: none;
   }
-}
+  .menu-item {
+    padding: 10px auto;
+    border-radius: 0px;
+    justify-self: stretch;
+  }
+} */

@@ -1,3 +1,9 @@
+footer {
+  background-color: var(--cor-12);
+  padding-bottom: 40px;
+  align-items: center;
+}
+
 .rodape {
   background-color: var(--cor-12);
   padding: 50px 70px;
@@ -5,9 +11,9 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 3fr 3fr;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 1fr;
   gap: 40px;
-  padding-bottom: 0px;
+  padding-bottom: 40px;
 }
 
 .rodape-logo {
@@ -84,6 +90,7 @@ a {
   color: var(--cor-05);
   font-size: 1.125rem;
   justify-self: center;
+  text-align: center;
 }
 
 @media (max-width: 800px) {
@@ -109,9 +116,16 @@ a {
   }
   .rodape-contato {
     grid-column: 1;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(3, min-content) min-content;
   }
   .rodape-contato-endereco {
     place-content: start;
+  }
+  .rodape-redes-sociais {
+    justify-content: center;
+  }
+  .rodape {
+    grid-template-rows: min-content min-content min-content;
+    padding: 50px 30px;
   }
 }
