@@ -1,4 +1,4 @@
-@import url(../cores.css);
+@import("../cores.css")
 
 .conteiner-introducao {
   display: grid;
