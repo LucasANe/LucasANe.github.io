@@ -179,6 +179,7 @@
   font-weight: bolder;
   position: relative;
   margin: 10px 0px 10px 20px;
+  color: var(--cor-12);
 }
 
 .bike-preco {
