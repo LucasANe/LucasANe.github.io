@@ -21,3 +21,7 @@ li {
   margin: 0px;
   padding: 0px;
 }
+
+.margin-auto {
+  margin: 0 auto;
+}
