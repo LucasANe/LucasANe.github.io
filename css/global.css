@@ -26,3 +26,7 @@ li {
 .margin-auto {
   margin: 0 auto;
 }
+
+.cor-no-ponto {
+  color: var(--cor-p2);
+}
