@@ -14,3 +14,16 @@
   max-width: 200px;
   border-radius: 4px;
 }
+
+@media (max-width: 600px) {
+  #anuncio ul {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  #anuncio li {
+    margin: 0 auto;
+  }
+  #anuncio li img {
+    max-width: 300px;
+  }
+}

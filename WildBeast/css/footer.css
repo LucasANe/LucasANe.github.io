@@ -2,6 +2,11 @@ footer {
   background: var(--roxo-grad-reto);
 }
 
+footer .max-width {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 footer p {
   color: white;
   text-align: center;

@@ -140,3 +140,9 @@
 #conteudo img {
   border-radius: 5px;
 }
+
+@media (max-width: 600px) {
+  .mencao {
+    padding: 20px 30px;
+  }
+}
