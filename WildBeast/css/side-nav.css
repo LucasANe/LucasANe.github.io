@@ -1,0 +1,26 @@
+#side-nav {
+  background-color: var(--cinza);
+  padding: 30px;
+}
+
+#side-nav ul {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+#side-nav li {
+  display: block;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 5px 5px 15px 0px rgb(44 44 44 / 15%);
+  max-width: 100px;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+#side-nav li img {
+  width: 100px;
+}

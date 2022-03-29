@@ -1,0 +1,9 @@
+footer {
+  background: var(--roxo-grad-reto);
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding: 30px;
+}

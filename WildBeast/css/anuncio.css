@@ -1,0 +1,16 @@
+#anuncio {
+  background-color: var(--cinza);
+}
+
+#anuncio ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin: 30px;
+}
+
+#anuncio li img {
+  display: block;
+  max-width: 200px;
+  border-radius: 4px;
+}
