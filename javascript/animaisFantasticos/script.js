@@ -1,96 +1,76 @@
-// Retorne no console todas as imagens do site
-console.log(document.querySelectorAll("img"));
+function initTabNav() {
+  const tabMenu = document.querySelectorAll(".js-tabmenu li");
+  const tabContent = document.querySelectorAll(".js-tabconteudo section");
 
-// Retorne no console apenas as imagens que começaram com a palavra imagem
-console.log(document.querySelectorAll("[src^='img/imagem']"));
+  if (tabContent.length && tabMenu.length) {
+    tabContent[0].classList.add("ativo");
 
-// Selecione todos os links internos (onde o href começa com #)
-console.log(document.querySelectorAll("[href^='#']"));
+    function activeTab(index) {
+      tabContent.forEach((content) => {
+        content.classList.remove("ativo");
+      });
+      tabContent[index].classList.add("ativo");
+    }
 
-// Selecione o primeiro h2 dentro de .animais-descricao
-console.log(document.querySelector(".animais-descricao h2"));
-
-// Selecione o último p do site
-const p = document.querySelectorAll("p");
-console.log(p[--p.length].innerHTML);
-
-const titulosArray = Array.from(document.getElementsByClassName("titulo"));
-
-titulosArray.forEach((item) => console.log(item.innerHTML));
-
-// Mostre no console cada parágrado do site
-// p.forEach((item) => console.log(item));
-
-// Mostre o texto dos parágrafos no console
-// p.forEach((item) => console.log(item.innerText));
-
-// Como corrigir os erros abaixo:
-const imgs = document.querySelectorAll("img");
-
-imgs.forEach((item, index) => {
-  console.log(item, index);
-});
-
-let i = 0;
-imgs.forEach(() => {
-  console.log(i++);
-});
-
-imgs.forEach(() => i++);
-
-// Adicione a classe ativo a todos os itens do menu
-const menu_a = document.querySelectorAll(".menu a");
-menu_a.forEach((item) => item.classList.add("ativo"));
-menu_a.forEach((item) => console.log(item));
-
-// Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
-menu_a.forEach(function (item, index) {
-  if (index !== 0) {
-    item.classList.remove("ativo");
+    tabMenu.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        activeTab(index);
+      });
+    });
   }
-});
-
-// Verifique se as imagens possuem o atributo alt
-imgs.forEach((item) => {
-  console.log(item.hasAttribute("alt"));
-});
-
-// Verifique a distância da primeira imagem
-// em relação ao topo da página
-console.log(document.querySelector("img").clientHeight);
-
-// Retorne a soma da largura de todas as imagens
-let soma = 0;
-imgs.forEach((item, index) => {
-  let largura = item.getBoundingClientRect();
-  soma += largura.width;
-  if (--imgs.length === index) {
-    console.log(soma);
-  }
-});
-
-// Verifique se os links da página possuem
-// o mínimo recomendado para telas utilizadas
-// com o dedo. (48px/48px de acordo com o google)
-links = document.querySelectorAll("a");
-links.forEach((link, index) => {
-  let linkInfo = link.getBoundingClientRect();
-  if (linkInfo.width >= 48 && linkInfo.height >= 48) {
-    console.log(
-      `[${linkInfo.width}] [${linkInfo.height}] [${link.innerHTML}] tem o tamanho adequado`
-    );
-  } else {
-    console.log(
-      `[${linkInfo.width}] [${linkInfo.height}] [${link.innerHTML}] não tem o tamanho adequado`
-    );
-  }
-});
-
-// Se o browser for menor que 720px,
-// adicione a classe menu-mobile ao menu
-if (window.matchMedia("(max-width: 720px)").matches) {
-  document.querySelector("nav").classList.add("menu-mobile");
-  console.log(document.querySelector(".menu").classList);
-} else {
-  console.log(document.querySelector(".menu").classList);
 }
+
+function initAccordion() {
+  const accordionLista = document.querySelectorAll(".js-accordion dt");
+  if (accordionLista.length) {
+    accordionLista[0].classList.add("ativo");
+    function activeAccordion() {
+      this.classList.toggle("ativo");
+      this.nextElementSibling.classList.toggle("ativo");
+    }
+
+    accordionLista.forEach((item) => {
+      item.addEventListener("click", activeAccordion);
+    });
+  }
+}
+
+function scrollSuave() {
+  const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
+  if (linksInternos.length) {
+    function scrollToSection(event) {
+      event.preventDefault();
+      const href = event.currentTarget.getAttribute("href");
+      const section = document.querySelector(href);
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    linksInternos.forEach((link) => {
+      link.addEventListener("click", scrollToSection);
+    });
+  }
+}
+
+function scrollSection() {
+  const section = document.querySelectorAll(".js-scroll");
+  if (section) {
+    function animaScroll() {
+      section.forEach((item) => {
+        const sectionTop =
+          item.getBoundingClientRect().top - window.innerHeight * 0.55;
+        if (sectionTop < 0) {
+          item.classList.add("ativo");
+        }
+      });
+    }
+    window.addEventListener("scroll", animaScroll);
+  }
+}
+
+initTabNav();
+initAccordion();
+scrollSuave();
+scrollSection();

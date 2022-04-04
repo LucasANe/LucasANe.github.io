@@ -102,6 +102,7 @@ body {
   height: 370px;
   overflow-y: scroll;
   grid-column: 2;
+  cursor: pointer;
 }
 
 .animais-lista::-webkit-scrollbar {
@@ -217,4 +218,68 @@ body {
   .copy {
     margin-bottom: 0px;
   }
+}
+.js .js-tabconteudo section {
+  display: none;
+}
+
+.js .js-tabconteudo section.ativo {
+  display: block !important;
+  transform: translate3d(-30px, 0, 0);
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.js-accordion dt {
+  cursor: pointer;
+}
+
+.js .js-accordion dd {
+  display: none;
+}
+
+.js .js-accordion dt::after {
+  content: "⮧";
+  margin-left: 10px;
+}
+.js .js-accordion dt.ativo::after {
+  content: "⮥";
+  margin-left: 10px;
+}
+
+.js-accordion dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transition: 0.3s;
+  transform: translate3d(0, 0, 0);
 }
