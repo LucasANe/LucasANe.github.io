@@ -1,5 +1,5 @@
 const palavras =
-  "sagaz negro âmargo êxito mexer termo senso nobre algoz afeto plena ética mútua sutil tênue vigor aquém audaz porém fazer sanar seção inato assim cerne ideia desde fosse poder moral torpe honra muito justo anexo fútil razão quiçá etnia ícone sobre tange égide lapso mútuo sonho expor haver hábil amigo empo pesar posse ávido então boçal ardil coser genro corja seara dengo prole detém causa dizer não paz fel vil sob ser céu mal ver ter ego mãe bem mas vão vir dar bom ora dom são era réu que elo luz com rol tal nós seu vis hum uma até foi pós por ato dia pro dor dou pai sol sem eis lua pau mim irá tez ler fim rua tão empatia embuste cônjuge exceção efêmero prolixo caráter verbete idílico análogo genuíno estória sublime pêsames aurélio sucinto inferir família apático audácia acepção recesso astúcia pródigo redimir estigma estável refutar cultura cinismo virtude icônico exortar perspicaz recíproco impressão concessão supérfluo escrúpulo retificar paradigma presunção concepção dicotomia implícito propósito hipócrita plenitude ratificar essencial hegemonia corolário incidente esdrúxulo hermético vagabundo altruísmo persuadir aleatório altruísta promíscuo deliberar esperança sapiência confiança demasiado indelével mesquinho resignado eminência regozijar impetuoso descrição diligente inusitado compaixão prudência pretensão analítico discrição amor fato puta viés mito caos você esmo como brio vide ação após sede pois auge vida ermo saga ônus idem mote suma medo tolo casa foda apto crer além urge vovó sina veio pude zelo área pela ruim cota coxo soar rude gozo ente ater fase faça auto para tudo  mais voga rima será onde amar trás cedo logo cujo jugo meio ante sela meta teor doce face cela arte nojo traz pose numa pelo deus base asco teve alvo vale agir rito ócio foco alma todo alva eita sair ágil alto noia alta peço ódio nexo tese orla isso irão rege";
+  "sagaz negro âmargo êxito mexer termo senso nobre algoz afeto plena ética mútua sutil tênue vigor aquém audaz porém fazer sanar seção inato assim cerne ideia desde fosse poder moral torpe honra muito justo anexo fútil razão quiçá etnia ícone sobre tange égide lapso mútuo sonho expor haver hábil amigo empo pesar posse ávido então boçal ardil coser genro corja seara dengo prole detém causa dizer não paz fel vil sob ser céu mal ver ter ego mãe bem mas vão vir dar bom ora dom são era réu que elo luz com rol tal nós seu vis hum uma até foi pós por ato dia pro dor dou pai sol sem eis lua pau mim irá tez ler fim rua tão empatia embuste cônjuge exceção efêmero prolixo caráter verbete idílico análogo genuíno história sublime pêsames aurélio sucinto inferir família apático audácia acepção recesso astúcia pródigo redimir estigma estável refutar cultura cinismo virtude icônico exortar perspicaz recíproco impressão concessão supérfluo escrúpulo retificar paradigma presunção concepção dicotomia implícito propósito hipócrita plenitude ratificar essencial hegemonia corolário incidente esdrúxulo hermético vagabundo altruísmo persuadir aleatório altruísta promíscuo deliberar esperança sapiência confiança demasiado indelével mesquinho resignado eminência regozijar impetuoso descrição diligente inusitado compaixão prudência pretensão analítico discrição amor fato puta viés mito caos você esmo como brio vide ação após sede pois auge vida ermo saga ônus idem mote suma medo tolo casa foda apto crer além urge vovó sina veio pude zelo área pela ruim cota coxo soar rude gozo ente ater fase faça auto para tudo  mais voga rima será onde amar trás cedo logo cujo jugo meio ante sela meta teor doce face cela arte nojo traz pose numa pelo deus base asco teve alvo vale agir rito ócio foco alma todo alva eita sair ágil alto noia alta peço ódio nexo tese orla isso irão rege";
 const palavrasMatriz = palavras.split(" ");
 palavrasMatriz.forEach((item, index) => {
   // console.log(index);
@@ -28,12 +28,10 @@ function replaceSpecialChars(str) {
   str = str.replace(/[ÚÙÛ]/, "U");
   str = str.replace(/[ÈÉÊË]/, "E");
   str = str.replace(/[Ç]/, "C");
-
-  // o resto
-
   return str.replace(/[^a-z0-9]/gi, "");
 }
 const palavraFinal = replaceSpecialChars(palavraSorteada);
+const matrizPalavraFinal = palavraFinal.split("");
 // console.log(palavraFinal);
 const linhaOculta = [];
 const acertou = [];
@@ -61,7 +59,7 @@ function verificar(event) {
   this.classList.add("chutou");
   errada.appendChild(this);
   let letraChute = this.innerText;
-  matrizPalavraSorteada.forEach((letra, index) => {
+  matrizPalavraFinal.forEach((letra, index) => {
     if (letraChute === letra) {
       linhaOculta[index] = letraChute;
       linhaResposta.innerText = linhaOculta;
