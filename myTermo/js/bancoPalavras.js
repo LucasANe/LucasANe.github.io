@@ -410,7 +410,6 @@ listaPaises.forEach((item, index) => {
 const sorteio = Math.round(Math.random() * (197 - 0) + 0);
 const paisSorteado = paisesECapitais[sorteio];
 paisesECapitais.splice(sorteio, 1);
-console.log(paisSorteado.pais);
 const paisSorteadoH1 = document.createElement("h2");
 paisSorteadoH1.innerText = paisSorteado.pais;
 document.querySelector("main").appendChild(paisSorteadoH1);
@@ -427,12 +426,10 @@ for (let i = 0; i < 10; i++) {
 //
 
 //
-console.log(paisSorteado.capital);
 const num = Math.round(Math.random() * (9 - 0) + 0);
 const alternativas = [];
 paisesErrados.forEach((item, i) => {
   alternativas[i] = document.createElement("a");
-  console.log(i + " " + num);
   if (i === num) {
     alternativas[i].innerText = paisSorteado.capital;
   } else {
