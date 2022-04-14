@@ -1,0 +1,16 @@
+:root {
+  --branco: #f6ffff;
+  --cinza-azulado: #8e9db4;
+  --cinza: #e6ebeb;
+  --vermelho: #d71a21;
+  --preto: #2d3035;
+  --preto-bg: #1a1d22;
+  --azul-ciano: #0095da;
+  --azul-claro: #42d6ff;
+  --azul-bg: linear-gradient(
+    90deg,
+    rgba(41, 109, 142, 1) 0%,
+    rgba(67, 150, 189, 1) 50%,
+    rgba(41, 109, 142, 1) 100%
+  );
+}

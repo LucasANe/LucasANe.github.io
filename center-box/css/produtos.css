@@ -1,0 +1,87 @@
+#produtos .box-titulo {
+  text-align: center;
+  justify-content: center;
+}
+
+#produtos .sub-titulo {
+  padding-top: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+#produtos .paragrafo {
+  color: rgba(0, 0, 0, 0.6);
+  margin: 1.3em 0;
+}
+
+#produtos .produtos-display {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#produtos .produtos-img img {
+  border: 4px solid var(--cinza-azulado);
+  position: relative;
+}
+
+#produtos .produtos-display h4 {
+  font-weight: 400;
+  text-align: center;
+}
+
+#produtos .add-orcamento {
+  display: grid;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5em 0.7em;
+  color: var(--azul-ciano);
+  margin-bottom: 35px;
+  position: relative;
+}
+
+#produtos .veja-mais {
+  margin: 0 auto;
+  color: var(--branco);
+  padding: 0.4em 0.6em 0.4em 3em;
+  background-color: var(--vermelho);
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#produtos .veja-mais::before {
+  content: "+";
+  font-size: 2.5rem;
+  color: var(--branco);
+  border-radius: 2px;
+  position: absolute;
+  top: -12px;
+  left: 13px;
+}
+#produtos .produtos-img a {
+  cursor: pointer;
+}
+
+#produtos .produtos-img::before {
+  content: url("../img/logo/logo-b.png");
+  width: 308px;
+  height: 264px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  display: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#produtos .produtos-img:hover::before {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  #produtos .produtos-display {
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,131 @@
+footer {
+  background-color: var(--cor-12);
+  padding-bottom: 40px;
+  align-items: center;
+}
+
+.rodape {
+  background-color: var(--cor-12);
+  padding: 50px 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.rodape-logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.rodape-contato {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 2fr 2fr;
+  gap: 30px;
+}
+
+.rodape-contato h1 {
+  color: var(--cor-01);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.rodape-contato-endereco p,
+a {
+  color: var(--cor-05);
+  line-height: 2;
+  font-size: 1.125rem;
+}
+
+.rodape-contato-endereco a:hover {
+  color: var(--cor-01);
+}
+
+.rodape-contato-endereco {
+  border-bottom: 2px solid var(--cor-11);
+  padding-bottom: 10px;
+}
+
+.rodape-redes-sociais {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+
+.informacoes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 30px;
+  margin-left: 40px;
+}
+
+.informacoes a {
+  color: var(--cor-05);
+  line-height: 2;
+  font-size: 1.125rem;
+}
+
+.informacoes a:hover {
+  color: var(--cor-01);
+}
+
+.informacoes h1 {
+  color: var(--cor-01);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.direitos-reservados {
+  display: block;
+  grid-template-columns: 1 / -1;
+  color: var(--cor-05);
+  font-size: 1.125rem;
+  justify-self: center;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .rodape {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rodape-logo {
+    display: none;
+  }
+
+  .informacoes {
+    margin: 0px;
+  }
+
+  .rodape-contato {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .rodape {
+    grid-template-columns: 1fr;
+  }
+  .rodape-contato {
+    grid-column: 1;
+    grid-template-rows: repeat(3, min-content) min-content;
+  }
+  .rodape-contato-endereco {
+    place-content: start;
+  }
+  .rodape-redes-sociais {
+    justify-content: center;
+  }
+  .rodape {
+    grid-template-rows: min-content min-content min-content;
+    padding: 50px 30px;
+  }
+}

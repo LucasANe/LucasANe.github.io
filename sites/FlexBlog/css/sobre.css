@@ -1,0 +1,44 @@
+.novo-css {
+  padding: 50px 0;
+  margin: 0 10px;
+}
+
+.border-top-bottom {
+  border-bottom: 2px solid var(--azul-claro);
+  border-top: 2px solid var(--azul-claro);
+}
+
+main h1 {
+  margin: 50px 10px 30px 10px;
+}
+
+main p {
+  margin: 30px 10px;
+  max-width: 750px;
+}
+
+#sobre .img {
+  margin: 50px 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+@media (max-width: 1000px) {
+  #sobre {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  #sobre .img {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto;
+  }
+}
+@media (max-width: 500px) {
+  #sobre .img img {
+    object-fit: cover;
+    object-position: right;
+    width: 40%;
+  }
+}

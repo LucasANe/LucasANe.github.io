@@ -1,0 +1,133 @@
+#header {
+  position: relative;
+}
+
+#header .logo {
+  margin: 1em 0;
+  margin-left: 10px;
+}
+
+#header .contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2em;
+  font-size: 0.875rem;
+  position: relative;
+}
+
+#header .contato::before {
+  content: "";
+  background-image: url("../img/icones/telefone-b.png");
+  width: 22px;
+  height: 30px;
+  position: absolute;
+  left: -25px;
+  top: -3px;
+}
+
+#header .contato span {
+  content: "";
+  background-image: url("../img/icones/facebook.png");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: -35px;
+  top: -3px;
+}
+
+#header .box-carrinho {
+  background-color: var(--azul-ciano);
+  padding: 0.5em 3em 0.5em 1em;
+  max-height: 40px;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  cursor: pointer;
+}
+
+#header .carrinho {
+  background-color: var(--azul-ciano);
+  position: relative;
+  font-size: 0.825rem;
+  padding: 0 30px;
+  color: var(--branco);
+  text-align: center;
+  align-self: center;
+}
+
+.box-carrinho a {
+  font-size: 0.825rem;
+  color: var(--branco);
+  text-align: center;
+}
+
+#header .carrinho::before {
+  content: "";
+  background-image: url("../img/icones/carrinho.png");
+  width: 30px;
+  height: 26px;
+  position: absolute;
+  right: -40px;
+  top: 5px;
+}
+
+#header .menu {
+  background-color: var(--vermelho);
+  justify-content: center;
+  position: relative;
+}
+
+#header .menu a {
+  padding: 0.6rem 0.8rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+#header .banner img {
+  top: 115px;
+}
+
+.seta-e,
+.seta-d {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 5px;
+}
+
+#header .box-banner {
+  margin: 105px 0;
+  color: var(--branco);
+}
+
+.box-botao {
+  margin-top: 1.8em;
+  display: grid;
+  justify-content: center;
+}
+
+.botao {
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  color: var(--branco);
+  padding: 0.8em 0.4em;
+  background-color: var(--vermelho);
+}
+
+@media (max-width: 800px) {
+  #header .menu {
+    flex-wrap: wrap;
+  }
+  #header .banner img {
+    top: 170px;
+  }
+  #header .contato span {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #header .titulo {
+    font-size: 2rem;
+  }
+}

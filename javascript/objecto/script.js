@@ -74,30 +74,63 @@
 // // Qual o construtor do dado abaixo:
 // li.hidden.constructor.name;
 // Retorne o valor total das compras
-const compras = [
-  {
-    item: "Banana",
-    preco: "R$ 4,99",
-  },
-  {
-    item: "Ovo",
-    preco: "R$ 2,99",
-  },
-  {
-    item: "Carne",
-    preco: "R$ 25,49",
-  },
-  {
-    item: "Refrigerante",
-    preco: "R$ 5,35",
-  },
-  {
-    item: "Quejo",
-    preco: "R$ 10,60",
-  },
-];
-const precoTotal = compras.reduce((anterior, item, index) => {
-  const itemValor = +item.preco.slice(3).replace(",", ".");
-  return anterior + itemValor;
-}, 0);
-console.log(precoTotal);
+// const compras = [
+//   {
+//     item: "Banana",
+//     preco: "R$ 4,99",
+//   },
+//   {
+//     item: "Ovo",
+//     preco: "R$ 2,99",
+//   },
+//   {
+//     item: "Carne",
+//     preco: "R$ 25,49",
+//   },
+//   {
+//     item: "Refrigerante",
+//     preco: "R$ 5,35",
+//   },
+//   {
+//     item: "Quejo",
+//     preco: "R$ 10,60",
+//   },
+// ];
+// const precoTotal = compras.reduce((anterior, item, index) => {
+//   const itemValor = +item.preco.slice(3).replace(",", ".");
+//   return anterior + itemValor;
+// }, 0);
+// console.log(precoTotal);
+
+// Reescreva a função utilizando
+// valores iniciais de parâmetros com ES6
+// function createButton(background = "blue", color = "red") {
+//   const buttonElement = document.createElement("button");
+//   buttonElement.style.background = background;
+//   buttonElement.style.color = color;
+//   buttonElement.innerHTML = "clique";
+//   document.querySelector("body").appendChild(buttonElement);
+//   return buttonElement;
+// }
+
+// const redButton = createButton();
+
+// // Utilize o método push para inserir as frutas ao final de comidas.
+// const frutas = ["Banana", "Uva", "Morango"];
+// const comidas = ["Pizza", "Batata"];
+// comidas.push(...frutas);
+// console.log(comidas);
+
+const cpfs = document.querySelectorAll("li");
+function elementsInnerText([...elements]) {
+  return elements.map((elements) => elements.innerText);
+}
+
+let cpfLimpo = elementsInnerText(cpfs).map((cpf) => {
+  cpf = cpf.replace(/\D/g, "");
+  return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+});
+
+cpfs.forEach((cpf, i) => {
+  cpf.innerText = cpfLimpo[i];
+});

@@ -1,0 +1,14 @@
+form {
+  max-width: 500px;
+  display: flex;
+}
+
+input {
+  max-width: 1ch;
+  margin: 5px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(300px, 500px);
+}

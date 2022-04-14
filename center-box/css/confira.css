@@ -1,0 +1,90 @@
+#confira {
+  background: rgb(41, 109, 142);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 109, 142, 1) 0%,
+    rgba(67, 150, 189, 1) 50%,
+    rgba(41, 109, 142, 1) 100%
+  );
+  margin-top: 30px;
+  padding: 45px 0;
+}
+
+#confira .bg-branco {
+  background-color: var(--branco);
+}
+
+#confira .titulo {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5em;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+#confira .confira-box {
+  max-width: 300px;
+}
+
+#confira .sub-titulo {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#confira .gr-img {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#confira .gr-img img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10xp;
+}
+
+#confira .confira-box p {
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+#confira .botao {
+  display: block;
+  text-transform: uppercase;
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+  margin-bottom: 3em;
+}
+#confira .dec-icones li {
+  position: relative;
+}
+
+#confira .dec-icones li:first-child::before {
+  content: url("../img/dec/local-dec.png");
+  position: absolute;
+  left: 132px;
+  top: 80px;
+}
+
+#confira .dec-icones li:nth-child(2)::before {
+  content: url("../img/dec/tempo.png");
+  position: absolute;
+  left: 126px;
+  top: 80px;
+}
+
+#confira .dec-icones li:nth-child(3)::before {
+  content: url("../img/dec/maos-dec.png");
+  position: absolute;
+  left: 120px;
+  top: 90px;
+}
+
+@media (max-width: 800px) {
+  #confira .dec-icones {
+    justify-content: space-around;
+  }
+}

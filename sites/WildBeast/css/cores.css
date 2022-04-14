@@ -1,0 +1,15 @@
+:root {
+  --roxo-claro: #b07dfb;
+  --roxo-escuro: #8844ee;
+  --roxo-grad-reto: linear-gradient(
+    90deg,
+    rgba(136, 68, 238, 1) 50%,
+    rgba(176, 125, 251, 1) 100%
+  );
+  --roxo-grad-inclinado: linear-gradient(
+    135deg,
+    rgba(136, 68, 238, 1) 50%,
+    rgba(176, 125, 251, 1) 100%
+  );
+  --cinza: #fafbfc;
+}

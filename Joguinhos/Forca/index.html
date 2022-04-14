@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Nunito:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Press+Start+2P&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <div>
+                <img class="ativo" src="./coracao-48.png" alt="">
+            </div>
+            <div>
+                <img class="ativo" src="./coracao-48.png" alt="">
+            </div>
+            <div class="">
+                <img class="ativo" src="./coracao-48.png" alt="">
+            </div>
+            <div class="">
+                <img class="ativo" src="./coracao-48.png" alt="">
+            </div>
+            <div class="">
+                <img class="ativo" src="./coracao-48.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Jogo da forca</h1>
+        <div>
+            <p>|-----------------|</p>
+
+        </div>
+    </main>
+    <form id="chute-inteiro" method="get">
+        <input type="text" id="resposta" name="texto" onfocus="this.value='';">
+        <input type="button" onclick="tentativaInteira()" id='tentar' value="TENTAR">
+    </form>
+    <section class="alfabeto">
+
+        <a>a</a>
+        <a>b</a>
+        <a>c</a>
+        <a>d</a>
+        <a>e</a>
+        <a>f</a>
+        <a>g</a>
+        <a>h</a>
+        <a>i</a>
+        <a>j</a>
+        <a>k</a>
+        <a>l</a>
+        <a>m</a>
+        <a>n</a>
+        <a>o</a>
+        <a>p</a>
+        <a>q</a>
+        <a>r</a>
+        <a>s</a>
+        <a>t</a>
+        <a>u</a>
+        <a>v</a>
+        <a>w</a>
+        <a>x</a>
+        <a>y</a>
+        <a>z</a>
+    </section>
+    <section>
+        <div class="erradas">
+
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

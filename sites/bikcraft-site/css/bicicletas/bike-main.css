@@ -1,0 +1,197 @@
+/*                           */
+@import url("../cores.css");
+@import url("../global.css");
+@import url("../menu.css");
+@import url("../rodape.css");
+/*                           */
+
+.titulo {
+  background-color: var(--cor-11);
+  margin: 0px auto;
+  max-width: 1400px;
+  padding: 60px 80px;
+}
+.titulo h2 {
+  font-size: 1.525rem;
+  color: var(--cor-06);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.titulo h1 {
+  font-size: 4rem;
+  color: var(--cor-01);
+  position: relative;
+  text-transform: lowercase;
+}
+
+.titulo h1::after {
+  content: url("/img/dec/top-right.svg");
+  height: 52px;
+  width: 52px;
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
+.introcucao-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
+  object-fit: cover;
+  object-position: center;
+  padding: 60px 80px;
+  gap: 40px;
+}
+.introducao-img {
+  width: 100%;
+  border-radius: 4px;
+  grid-area: 1 / -1;
+}
+.img- {
+  display: grid;
+}
+.img-span {
+  padding: 8px 16px;
+  color: var(--cor-01);
+  background-color: var(--cor-11);
+  border-radius: 4px 0px 0px 4px;
+  place-self: start end;
+  display: grid;
+  grid-area: 1 / -1;
+  margin-top: 20px;
+}
+
+.introcucao-descricao {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, min-content);
+  gap: 12px;
+}
+
+.introcucao-descricao h1 {
+  font-size: 2rem;
+  position: relative;
+}
+
+.introcucao-descricao h1::after {
+  content: url("/img/dec/top-right.svg");
+  height: 52px;
+  width: 52px;
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
+.span-efeito {
+  content: "";
+  height: 8px;
+  width: 12px;
+  background-color: var(--cor-p1);
+}
+.introcucao-descricao p,
+span,
+a {
+  font-size: 1rem;
+  color: var(--cor-08);
+  line-height: 1.5;
+}
+
+.descricao-botao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+ul img {
+  max-width: 24px;
+}
+.descricao-botao li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.descricao-botao a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  background-color: var(--cor-p1);
+  color: var(--cor-p5);
+  font-weight: 700;
+  place-self: end;
+  border-radius: 4px;
+  position: relative;
+}
+.descricao-botao a::after {
+  content: url(../../img/icones/seta.svg);
+  margin-left: 8px;
+}
+.descricao-botao a:hover {
+  background-image: linear-gradient(to bottom, var(--cor-p1), var(--cor-p3));
+}
+
+main section:nth-child(odd) {
+  box-shadow: inset -70vw 0px var(--cor-11);
+}
+.branco {
+  color: var(--cor-01);
+}
+.branco p {
+  color: var(--cor-06);
+}
+.branco2 {
+  color: var(--cor-06);
+}
+.tm {
+  font-size: 4rem;
+}
+nav a {
+  color: var(--cor-05);
+  line-height: 2;
+  font-size: 1.125rem;
+}
+@media (max-width: 950px) {
+  .introcucao-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+  }
+  .introcucao-box {
+    padding: 60px 40px;
+    transition: 0.3s;
+  }
+  .titulo {
+    padding: 60px 40px;
+    transition: 0.3s;
+  }
+  main section:nth-child(odd) {
+    box-shadow: inset -100vw 0px var(--cor-11);
+  }
+}
+@media (max-width: 500px) {
+  .descricao-botao {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+  }
+  .descricao-botao a {
+    place-self: start;
+  }
+  .titulo {
+    padding: 60px 20px;
+    transition: 0.3s;
+  }
+  .introcucao-box {
+    padding: 60px 20px;
+    transition: 0.3s;
+  }
+  .titulo h1::after {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .titulo h1 {
+    font-size: 2.5rem;
+    place-self: start;
+  }
+  .titulo h2 {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,43 @@
+#servico {
+  position: relative;
+}
+
+#servico .efeito-linha-azul {
+  top: 70px;
+}
+
+#servico .box-banner {
+  padding-top: 170px;
+}
+
+#servico .banner img {
+  top: 80px;
+}
+
+#servicos .box-banner .sub-titulo {
+  font-size: 1rem;
+}
+
+#servico .box-banner .titulo {
+  font-size: 3rem;
+}
+
+#servico .botao {
+  text-transform: uppercase;
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+}
+
+#servico .dec-maos {
+  padding-top: 3em;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  #servicos .box-banner .titulo {
+    font-size: 1.5rem;
+  }
+}

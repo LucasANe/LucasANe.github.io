@@ -1,0 +1,197 @@
+#footer {
+  background-color: var(--preto-bg);
+  color: var(--branco);
+}
+
+#footer .footer-grid-1 {
+  display: grid;
+  grid-template-columns: 310px;
+  grid-template-rows: repeat(5, min-content);
+  align-content: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#footer .titulo {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+#footer .footer-icone img {
+  display: block;
+  margin: 0 auto;
+}
+
+#footer .lista-itens {
+  margin-top: 10px;
+  color: var(--branco);
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#footer .lista-itens::before {
+  content: "-";
+  display: none;
+}
+#footer .lista-itens::after {
+  content: "-";
+  display: none;
+}
+#footer .lista-itens:hover::before {
+  display: inline;
+}
+#footer .lista-itens:hover::after {
+  display: inline;
+}
+#footer .lista-itens:hover {
+  text-decoration: underline;
+}
+
+#footer .footer-grid-1 p {
+  text-align: center;
+  margin: 10px 0 30px 0;
+}
+
+#footer .botao {
+  display: grid;
+  border-radius: 6px;
+  padding-left: 3em;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#footer .footer-grid-1 .botao::before {
+  content: url("../img/icones/carrinho.png");
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+
+#footer .box-botao {
+  margin: 0;
+}
+
+#footer .footer-grid-2 {
+  display: grid;
+  grid-template-columns: 310px;
+  grid-template-rows: repeat(3, min-content);
+  margin-top: 40px;
+}
+
+#footer .footer-grid-2 .titulo {
+  margin-bottom: 57px;
+}
+
+#footer .footer-grid-2 .botao {
+  margin-top: 65px;
+}
+
+#footer .footer-grid-2 .botao::before {
+  content: "+";
+  font-size: 2rem;
+  position: absolute;
+  left: 15px;
+  top: 2px;
+}
+
+#footer .footer-grid-3 {
+  display: grid;
+  grid-template-columns: 310px;
+  grid-template-rows: repeat(4, min-content);
+
+  margin-top: 40px;
+}
+
+#footer .footer-grid-3 h2 {
+  text-transform: uppercase;
+}
+#footer form {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-columns: 200px;
+  margin-top: 20px;
+}
+
+#footer input {
+  background-color: var(--preto-bg);
+  padding: 0.3em 0.5em;
+  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+  font-size: 1.125rem;
+  font-family: "Poppins", sans-serif;
+  box-shadow: none;
+}
+
+#footer button {
+  cursor: pointer;
+  border: none;
+  margin-top: 49px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+#footer button::before {
+  content: url("../img/icones/enviarl.png");
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+
+#footer .f-menu {
+  display: flex;
+  align-items: center;
+}
+
+#footer .f-menu a {
+  color: rgba(255, 255, 255, 0.4);
+  margin: 20px 0;
+  padding: 0.4em 1em;
+  font-size: 0.7rem;
+  position: relative;
+}
+
+#footer .f-menu a:hover {
+  color: white;
+}
+
+#footer .footer-f {
+  background-color: black;
+}
+
+#footer .direitos {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+#footer .direitos p {
+  margin: 0px 20px;
+}
+
+#footer .ag {
+  display: flex;
+  align-items: center;
+}
+
+#footer .F {
+  place-items: center;
+}
+
+#footer .face {
+  color: rgba(255, 255, 255, 0.4);
+  place-self: center;
+  align-self: center;
+  justify-self: center;
+}
+
+@media (max-width: 800px) {
+  #footer .f-menu {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

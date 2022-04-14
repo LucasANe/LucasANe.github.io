@@ -1,0 +1,137 @@
+.conteiner-seguros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
+  padding: 60px;
+  background-color: var(--cor-11);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.texto-grande {
+  font-size: 4rem;
+  color: var(--cor-00);
+  margin-bottom: 30px;
+}
+
+.seguros-flex-box {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 90px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.seguros {
+  padding: 40px 60px;
+  background-color: var(--cor-12);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+.seguros-cabecario {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.seguro-titulo {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--cor-00);
+}
+
+.prata {
+  color: var(--cor-07);
+}
+
+.ouro {
+  color: var(--cor-p2);
+}
+
+.seguros-valor {
+  font-size: 2rem;
+  color: var(--cor-01);
+  text-align: right;
+  font-weight: 700;
+}
+
+.seguros-mensal {
+  grid-column: 2;
+  color: var(--cor-05);
+  text-align: right;
+}
+
+.seguros-vantagens li p {
+  color: var(--cor-01);
+  line-height: 2;
+}
+
+.seguros-vantagens li {
+  position: relative;
+}
+
+.seguros-vantagens li::before {
+  content: "";
+  background-image: url("../../img/icones/lista.svg");
+  width: 13px;
+  height: 9px;
+  position: absolute;
+  left: -20px;
+  top: 11px;
+}
+
+.seguros-botao-prata {
+  text-transform: uppercase;
+  padding: 15px 30px;
+  background-color: var(--cor-10);
+  color: var(--cor-01);
+  font-weight: 700;
+  place-self: start;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+.seguros-botao-ouro {
+  text-transform: uppercase;
+  padding: 15px 30px;
+  background-color: var(--cor-p2);
+  color: var(--cor-p5);
+  font-weight: 700;
+  place-self: start;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+.seguros-botao-prata:hover {
+  background-image: linear-gradient(to right, var(--cor-10), var(--cor-09));
+}
+
+.seguros-botao-ouro:hover {
+  background-image: linear-gradient(to right, var(--cor-p3), var(--cor-p2));
+}
+
+@media (max-width: 1000px) {
+  .seguros-flex-box {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  .seguros-flex-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+  }
+
+  .seguros {
+    grid-template-rows: repeat(3, min-content);
+  }
+}
+
+@media (max-width: 600px) {
+  .conteiner-seguros {
+    padding: 60px 30px;
+  }
+}

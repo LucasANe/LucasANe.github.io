@@ -1,0 +1,38 @@
+#side-nav {
+  background-color: var(--cinza);
+  padding: 30px;
+}
+
+#side-nav ul {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+#side-nav li {
+  display: block;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 5px 5px 15px 0px rgb(44 44 44 / 15%);
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+#side-nav li img {
+  width: 100px;
+}
+
+@media (max-width: 600px) {
+  /* #side-nav {
+    max-width: 500px; */
+
+  #side-nav ul {
+    max-width: 550px;
+    align-self: center;
+    display: flex;
+    overflow-x: auto;
+    padding: 30px;
+  }
+}

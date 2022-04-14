@@ -1,0 +1,34 @@
+.titulo {
+  background-color: var(--cor-11);
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0px auto;
+}
+.titulo p {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--cor-06);
+}
+.titulo h1 {
+  font-size: 4rem;
+  color: var(--cor-01);
+}
+.termos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, min-content);
+  padding: 40px 80px;
+}
+
+.termos-grid h3 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+.termos-grid p {
+  line-height: 1.5;
+  font-size: 0.9755rem;
+  color: var(--cor-10);
+  margin-top: 30px;
+  max-width: 75ch;
+}

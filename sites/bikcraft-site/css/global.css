@@ -1,0 +1,32 @@
+@import url("/css/cores.css");
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px auto;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  text-decoration: none;
+  margin: 0px;
+  color: black;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.cor-no-ponto {
+  color: var(--cor-p2);
+}

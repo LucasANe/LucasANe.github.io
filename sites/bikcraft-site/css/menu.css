@@ -1,0 +1,140 @@
+.introducao-margem {
+  display: block;
+}
+
+.introducao-logo {
+  border: 2px solid var(--cor-12);
+  border-radius: 4px;
+}
+
+.introducao-logo:active {
+  border: 2px solid var(--cor-00);
+  border-radius: 4px;
+}
+
+.introducao-menu {
+  background-color: var(--cor-12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  border-bottom: 2px solid var(--cor-11);
+  padding: 20px 80px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: end;
+  gap: 30px;
+  grid-column: 2;
+  justify-self: end;
+}
+
+.menu-item {
+  color: var(--cor-00);
+  padding: 15px 0px;
+  font-size: 1.225rem;
+  border-bottom: 3px solid var(--cor-12);
+}
+
+.menu-item:hover {
+  border-bottom: 3px solid var(--cor-00);
+  transition: left right 0.3s;
+}
+
+@media (max-width: 900px) {
+  .introducao-menu {
+    grid-template-rows: auto auto min-content;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 40px 0px;
+    padding: 40px 40px 0px 0px;
+    background-color: var(--cor-12);
+    border-bottom: 2px solid var(--cor-07);
+  }
+
+  .menu {
+    margin: 0px auto;
+  }
+
+  .introducao-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px 40px;
+    gap: 30px;
+  }
+
+  .menu-item {
+    padding: 20px 25px;
+    background-color: var(--cor-11);
+    border-radius: 4px;
+  }
+
+  .menu-item:hover {
+    background-color: #121212;
+    border: none;
+  }
+
+  .introducao-logo {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .introducao-cinza-menu {
+    background-color: var(--cor-12);
+    z-index: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .introducao-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .menu {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 550px) {
+  .introducao-menu {
+    display: grid;
+    padding: 10px 0px 10px 0px;
+    grid-template-rows: auto auto;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 0px;
+    margin: 0px;
+    justify-items: center;
+    justify-self: center;
+    justify-content: center;
+  }
+  .menu-item {
+    border-radius: 0px;
+  }
+}
+
+/* @media (max-width: 550px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0xp;
+    margin: 0px;
+    justify-items: none;
+    justify-self: none;
+  }
+  .menu-item {
+    padding: 10px auto;
+    border-radius: 0px;
+    justify-self: stretch;
+  }
+} */
